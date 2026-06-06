@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JanMitra AI – View your generated complaint, ticket ID, department routing, and download bilingual PDF." />
+  <title>Complaint Results – JanMitra AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/results.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586"/><path d="M3 4a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H7l-4 4V4z"/></svg>
+      </div>
+      <div class="logo-wordmark">
+        <span class="logo-wordmark-top">JanMitra <span>AI</span></span>
+        <span class="logo-wordmark-sub">Citizen Services</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="workflow.html" class="nav-link">Services</a></li>
+      <li><a href="assistant.html" class="nav-link">Assistant</a></li>
+      <li><a href="resources.html" class="nav-link">Resources</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="workflow.html" class="btn btn-gold btn-sm">New Request</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main class="results-page" id="resultsPage">
+  <div class="container">
+
+    <!-- SUCCESS BANNER -->
+    <div class="success-banner" id="successBanner">
+      <div class="success-icon-ring">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="success-text">
+        <h1>Complaint Generated Successfully</h1>
+        <p>Your professional bilingual complaint is ready. Review the document and download below.</p>
+      </div>
+    </div>
+
+    <!-- TICKET CARD -->
+    <div class="ticket-card ticket-card-top" id="ticketCard">
+      <div class="ticket-header">
+        <div class="ticket-id-group">
+          <span class="ticket-label">Ticket ID</span>
+          <span class="ticket-id" id="ticketId">JM-2024-08471</span>
+          <button class="copy-btn" id="copyTicketBtn">
+            <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            Copy
+          </button>
+        </div>
+        <span class="status-badge status-generated">Document Ready</span>
+      </div>
+      <div class="ticket-meta">
+        <div class="meta-item">
+          <div class="meta-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+          </div>
+          <div>
+            <span class="meta-label">Category</span>
+            <span class="meta-value" id="ticketCategory">Public Utilities</span>
+          </div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div>
+            <span class="meta-label">Department</span>
+            <span class="meta-value" id="ticketDept">Energy Department</span>
+          </div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div>
+            <span class="meta-label">Priority</span>
+            <span class="meta-value" id="ticketPriority">
+              <span class="priority-badge priority-high">High</span>
+            </span>
+          </div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div>
+            <span class="meta-label">Generated</span>
+            <span class="meta-value" id="ticketDate">Jun 6, 2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="content-tabs" id="contentTabs">
+      <div class="tabs-header">
+        <button class="tab-btn active" data-tab="english" id="tabEnglish">English Complaint</button>
+        <button class="tab-btn" data-tab="hindi" id="tabHindi">&#x939;&#x93F;&#x902;&#x926;&#x940; &#x936;&#x93F;&#x915;&#x93E;&#x92F;&#x924;</button>
+        <button class="tab-btn" data-tab="summary" id="tabSummary">Analysis &amp; Routing</button>
+      </div>
+
+      <!-- ENGLISH TAB -->
+      <div class="tab-content active" id="tabContentEnglish">
+        <div class="complaint-doc" id="englishComplaint">
+          <div class="doc-header">
+            <div class="doc-to">
+              <strong>To,</strong><br />
+              The Superintending Engineer,<br />
+              <span id="engDeptName">Energy Department</span><br />
+              State Electricity Board
+            </div>
+            <div class="doc-date">Date: <span id="engDate">June 06, 2024</span></div>
+          </div>
+          <div class="doc-subject">
+            <strong>Subject:</strong> <span id="engSubject">Complaint Regarding Continuous Power Outage</span>
+          </div>
+          <div class="doc-body" id="engBody">
+            <p>Respected Sir/Madam,</p>
+            <p>I am writing to formally bring to your attention the continuous power outage affecting our area for the past three days. The situation has caused significant disruption to daily life and requires urgent attention.</p>
+            <p>The power supply has been completely interrupted since June 3rd, 2024. Despite multiple calls to the helpline, no resolution has been provided. The prolonged outage has affected households, small businesses, and medical equipment users.</p>
+            <p>I respectfully request immediate restoration of power supply, a formal acknowledgment, and an expected resolution timeline.</p>
+            <p>Thanking you in anticipation of prompt action.</p>
+            <p><br />Yours faithfully,<br /><span id="engName">Complainant</span></p>
+          </div>
+        </div>
+        <div class="doc-actions">
+          <button class="btn btn-outline" id="copyEnglishBtn">Copy Text</button>
+          <button class="btn btn-gold" id="downloadEnglishBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download English PDF
+          </button>
+        </div>
+      </div>
+
+      <!-- HINDI TAB -->
+      <div class="tab-content" id="tabContentHindi">
+        <div class="complaint-doc hindi-doc" id="hindiComplaint">
+          <div class="doc-header">
+            <div class="doc-to">
+              <strong>&#x938;&#x947;&#x935;&#x93E; &#x92E;&#x947;&#x902;,</strong><br />
+              &#x905;&#x927;&#x940;&#x915;&#x94D;&#x937;&#x923; &#x905;&#x92D;&#x93F;&#x92F;&#x902;&#x924;&#x93E;,<br />
+              <span id="hinDeptName">&#x909;&#x930;&#x94D;&#x91C;&#x93E; &#x935;&#x93F;&#x92D;&#x93E;&#x917;</span><br />
+              &#x930;&#x93E;&#x91C;&#x94D;&#x92F; &#x935;&#x93F;&#x926;&#x94D;&#x92F;&#x941;&#x924; &#x92C;&#x94B;&#x930;&#x94D;&#x921;
+            </div>
+            <div class="doc-date">&#x926;&#x93F;&#x928;&#x93E;&#x902;&#x915;: <span id="hinDate">0&#x66; &#x91C;&#x942;&#x928;, 2024</span></div>
+          </div>
+          <div class="doc-subject">
+            <strong>&#x935;&#x93F;&#x937;&#x92F;:</strong> <span id="hinSubject">&#x928;&#x93F;&#x930;&#x902;&#x924;&#x930; &#x92C;&#x93F;&#x91C;&#x932;&#x940; &#x915;&#x91F;&#x94C;&#x924;&#x940; &#x938;&#x902;&#x92C;&#x902;&#x927;&#x940; &#x936;&#x93F;&#x915;&#x93E;&#x92F;&#x924;</span>
+          </div>
+          <div class="doc-body" id="hinBody">
+            <p>&#x92E;&#x93E;&#x928;&#x928;&#x940;&#x92F; &#x92E;&#x939;&#x94B;&#x926;&#x92F;/&#x92E;&#x939;&#x94B;&#x926;&#x92F;&#x93E;,</p>
+            <p>&#x92E;&#x948;&#x902; &#x906;&#x92A;&#x915;&#x93E; &#x927;&#x94D;&#x92F;&#x93E;&#x928; &#x939;&#x92E;&#x93E;&#x930;&#x947; &#x915;&#x94D;&#x937;&#x947;&#x924;&#x94D;&#x930; &#x92E;&#x947;&#x902; &#x92A;&#x93F;&#x91B;&#x932;&#x947; &#x924;&#x940;&#x928; &#x926;&#x93F;&#x928;&#x94B;&#x902; &#x938;&#x947; &#x91C;&#x93E;&#x930;&#x940; &#x928;&#x93F;&#x930;&#x902;&#x924;&#x930; &#x92C;&#x93F;&#x91C;&#x932;&#x940; &#x915;&#x91F;&#x94C;&#x924;&#x940; &#x915;&#x940; &#x938;&#x92E;&#x938;&#x94D;&#x92F;&#x93E; &#x915;&#x940; &#x913;&#x930; &#x906;&#x915;&#x930;&#x94D;&#x937;&#x93F;&#x924; &#x915;&#x930;&#x928;&#x93E; &#x91A;&#x93E;&#x939;&#x924;&#x93E;/&#x91A;&#x93E;&#x939;&#x924;&#x940; &#x939;&#x942;&#x901;&#x964;</p>
+            <p>&#x939;&#x947;&#x932;&#x94D;&#x92A;&#x932;&#x93E;&#x907;&#x928; &#x92A;&#x930; &#x915;&#x908; &#x92C;&#x93E;&#x930; &#x938;&#x902;&#x92A;&#x930;&#x94D;&#x915; &#x915;&#x930;&#x928;&#x947; &#x915;&#x947; &#x92C;&#x93E;&#x935;&#x91C;&#x942;&#x926; &#x915;&#x94B;&#x908; &#x938;&#x92E;&#x93E;&#x927;&#x93E;&#x928; &#x928;&#x939;&#x940;&#x902; &#x92E;&#x93F;&#x932;&#x93E;&#x964; &#x907;&#x938; &#x95B;&#x92F;&#x93E;&#x926;&#x93E; &#x936;&#x947;&#x937; &#x938;&#x92E;&#x938;&#x94D;&#x92F;&#x93E; &#x938;&#x947; &#x918;&#x930;&#x947;&#x932;&#x942; &#x909;&#x92A;&#x92D;&#x94B;&#x915;&#x94D;&#x924;&#x93E;, &#x91B;&#x94B;&#x91F;&#x947; &#x935;&#x94D;&#x92F;&#x93E;&#x92A;&#x93E;&#x930;&#x940; &#x914;&#x930; &#x91A;&#x93F;&#x915;&#x93F;&#x924;&#x94D;&#x938;&#x93E; &#x909;&#x92A;&#x915;&#x930;&#x923; &#x909;&#x92A;&#x92F;&#x94B;&#x917;&#x915;&#x930;&#x94D;&#x924;&#x93E; &#x917;&#x902;&#x92D;&#x940;&#x930; &#x930;&#x942;&#x92A; &#x938;&#x947; &#x92A;&#x94D;&#x930;&#x92D;&#x93E;&#x935;&#x93F;&#x924; &#x939;&#x948;&#x902;&#x964;</p>
+            <p>&#x92E;&#x948;&#x902; &#x938;&#x935;&#x93F;&#x928;&#x92F; &#x928;&#x93F;&#x935;&#x947;&#x926;&#x928; &#x915;&#x930;&#x924;&#x93E;/&#x915;&#x930;&#x924;&#x940; &#x939;&#x942;&#x901; &#x915;&#x93F; &#x906;&#x92A; &#x907;&#x938; &#x92E;&#x93E;&#x92E;&#x932;&#x947; &#x915;&#x94B; &#x924;&#x924;&#x94D;&#x915;&#x93E;&#x932; &#x92A;&#x94D;&#x930;&#x93E;&#x925;&#x92E;&#x93F;&#x915;&#x924;&#x93E; &#x938;&#x947; &#x932;&#x947;&#x902; &#x914;&#x930; &#x936;&#x940;&#x918;&#x94D;&#x930;&#x93E;&#x924;&#x93F;&#x936;&#x940;&#x918;&#x94D;&#x930; &#x92C;&#x93F;&#x91C;&#x932;&#x940; &#x906;&#x92A;&#x942;&#x930;&#x94D;&#x924;&#x93F; &#x92C;&#x939;&#x93E;&#x932; &#x915;&#x930;&#x947;&#x902;&#x964;</p>
+            <p>&#x927;&#x928;&#x94D;&#x92F;&#x935;&#x93E;&#x926;&#x964;</p>
+            <p><br />&#x92D;&#x935;&#x926;&#x940;&#x92F;,<br /><span id="hinName">&#x936;&#x93F;&#x915;&#x93E;&#x92F;&#x924;&#x915;&#x930;&#x94D;&#x924;&#x93E;</span></p>
+          </div>
+        </div>
+        <div class="doc-actions">
+          <button class="btn btn-outline" id="copyHindiBtn">Copy Text</button>
+          <button class="btn btn-gold" id="downloadHindiBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            &#x939;&#x93F;&#x902;&#x926;&#x940; PDF &#x921;&#x93E;&#x909;&#x928;&#x932;&#x94B;&#x921;
+          </button>
+        </div>
+      </div>
+
+      <!-- SUMMARY TAB -->
+      <div class="tab-content" id="tabContentSummary">
+        <div class="summary-grid">
+          <div class="summary-card">
+            <h3>Routing Information</h3>
+            <div class="summary-item"><span>Primary Department</span><strong id="sumDept">Energy Department</strong></div>
+            <div class="summary-item"><span>Sub-Department</span><strong>State Electricity Board</strong></div>
+            <div class="summary-item"><span>Helpline</span><strong>1912</strong></div>
+            <div class="summary-item"><span>Online Portal</span><strong><a href="#" target="_blank">vidyutmitra.gov.in</a></strong></div>
+          </div>
+          <div class="summary-card">
+            <h3>Issue Analysis</h3>
+            <div class="summary-item"><span>Issue Type</span><strong id="sumCategory">Power Outage</strong></div>
+            <div class="summary-item"><span>Priority</span><strong><span class="priority-badge priority-high">High</span></strong></div>
+            <div class="summary-item"><span>Est. Response</span><strong>24&ndash;48 hours</strong></div>
+            <div class="summary-item"><span>Escalation</span><strong>Grievance Cell &rarr; DM Office</strong></div>
+          </div>
+          <div class="summary-card">
+            <h3>Next Steps</h3>
+            <ol class="steps-list">
+              <li>Download both PDF versions</li>
+              <li>Submit via department portal or office</li>
+              <li>Reference Ticket ID: <strong id="sumTicketId">JM-2024-08471</strong></li>
+              <li>Follow up if no response in 48 hours</li>
+              <li>Escalate to District Magistrate if unresolved</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER ACTIONS -->
+    <div class="results-actions">
+      <button class="btn-download-all" id="downloadAllBtn">
+        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download All (English + Hindi PDF)
+      </button>
+      <a href="workflow.html" class="btn btn-outline" id="newComplaintBtn">File Another Complaint</a>
+      <button class="btn btn-outline" id="shareBtn">Share Ticket</button>
+    </div>
+
+  </div>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script src="js/results.js"></script>
+</body>
+</html>

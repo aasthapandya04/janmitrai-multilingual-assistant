@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JanMitra AI – Select your service. File complaints, get form guidance, understand policies, or route support requests using Gemini AI." />
+  <title>Select Service – JanMitra AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/workflow.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586"/><path d="M3 4a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H7l-4 4V4z"/></svg>
+      </div>
+      <div class="logo-wordmark">
+        <span class="logo-wordmark-top">JanMitra <span>AI</span></span>
+        <span class="logo-wordmark-sub">Citizen Services</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="workflow.html" class="nav-link active">Services</a></li>
+      <li><a href="assistant.html" class="nav-link">Assistant</a></li>
+      <li><a href="resources.html" class="nav-link">Resources</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="workflow.html" class="btn btn-gold btn-sm">Begin Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> <span>&rsaquo;</span> <span>Select Service</span>
+    </div>
+    <h1 class="page-title">What can we help you with?</h1>
+    <p class="page-subtitle">Select a service. All services support Hindi, Hinglish &amp; English — powered by Gemini AI.</p>
+  </div>
+</section>
+
+<section class="workflow-section">
+  <div class="container">
+    <div class="workflow-grid" id="workflowGrid">
+
+      <!-- COMPLAINT -->
+      <div class="workflow-card" id="wfComplaint" data-service="complaint" tabindex="0" role="button">
+        <div class="wf-badge">Most Used</div>
+        <div class="wf-num">01</div>
+        <div class="wf-icon-box">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div class="wf-content">
+          <h2 class="wf-title">File a Complaint</h2>
+          <p class="wf-desc">Write your complaint in Hindi or Hinglish. Gemini AI generates a professional bilingual complaint with ticket tracking and department routing.</p>
+          <ul class="wf-features">
+            <li>
+              <span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Hindi &amp; English Draft
+            </li>
+            <li>
+              <span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Auto Department Routing
+            </li>
+            <li>
+              <span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Unique Ticket ID
+            </li>
+            <li>
+              <span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              PDF Download Ready
+            </li>
+          </ul>
+        </div>
+        <a href="assistant.html?service=complaint" class="wf-cta" id="startComplaint">
+          Begin Filing
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <!-- FORM -->
+      <div class="workflow-card" id="wfForm" data-service="form" tabindex="0" role="button">
+        <div class="wf-num">02</div>
+        <div class="wf-icon-box">
+          <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        </div>
+        <div class="wf-content">
+          <h2 class="wf-title">Government Form Help</h2>
+          <p class="wf-desc">Confused by government forms? Describe the form or your situation, and AI will guide you through each field step by step.</p>
+          <ul class="wf-features">
+            <li><span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Step-by-step Guidance</li>
+            <li><span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Plain Language Explanations</li>
+            <li><span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Document Checklist</li>
+            <li><span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Bilingual Instructions</li>
+          </ul>
+        </div>
+        <a href="assistant.html?service=form" class="wf-cta" id="startForm">
+          Get Form Help
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <!-- POLICY -->
+      <div class="workflow-card" id="wfPolicy" data-service="policy" tabindex="0" role="button">
+        <div class="wf-num">03</div>
+        <div class="wf-icon-box">
+          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        </div>
+        <div class="wf-content">
+          <h2 class="wf-title">Policy Explainer</h2>
+          <p class="wf-desc">Ask about any government policy, scheme, or regulation. AI explains it in simple everyday language — no jargon.</p>
+          <ul class="wf-features">
+            <li><span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Simple Explanations</li>
+            <li><span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Eligibility Check</li>
+            <li><span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>How to Apply Guide</li>
+            <li><span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Latest Updates</li>
+          </ul>
+        </div>
+        <a href="assistant.html?service=policy" class="wf-cta" id="startPolicy">
+          Ask About Policy
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <!-- SUPPORT -->
+      <div class="workflow-card" id="wfSupport" data-service="support" tabindex="0" role="button">
+        <div class="wf-num">04</div>
+        <div class="wf-icon-box">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <div class="wf-content">
+          <h2 class="wf-title">Support Routing</h2>
+          <p class="wf-desc">Not sure which department to contact? AI analyzes your issue and automatically routes it to the correct authority.</p>
+          <ul class="wf-features">
+            <li><span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Smart Department Match</li>
+            <li><span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Contact Information</li>
+            <li><span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Escalation Path</li>
+            <li><span class="wf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Timeline Estimate</li>
+          </ul>
+        </div>
+        <a href="assistant.html?service=support" class="wf-cta" id="startSupport">
+          Find Department
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+    </div><!-- /workflow-grid -->
+
+    <!-- QUICK EXAMPLES -->
+    <div class="quick-examples">
+      <div class="quick-examples-label">Try these examples</div>
+      <div class="examples-chips">
+        <button class="example-chip" data-query="Mere ghar ki bijli 3 din se nahi hai" data-service="complaint" id="exEl">Power outage for 3 days</button>
+        <button class="example-chip" data-query="Paani ki supply meri colony mein band hai" data-service="complaint" id="exWater">Water supply disrupted</button>
+        <button class="example-chip" data-query="PM Kisan Samman Nidhi ke baare mein batao" data-service="policy" id="exPmk">PM Kisan Samman Nidhi</button>
+        <button class="example-chip" data-query="Ration card ke liye form kaise bharen" data-service="form" id="exRation">Ration card form help</button>
+        <button class="example-chip" data-query="Road mein gadhde hain, kisko complain karein" data-service="support" id="exRoad">Road repair — who to contact</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer-mini">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>&copy; 2024 JanMitra AI &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="resources.html">Resources</a></p>
+      <p>Prototype &mdash; Not an official government platform</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/workflow.js"></script>
+</body>
+</html>

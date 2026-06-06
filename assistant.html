@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JanMitra AI Assistant – Powered by Google Gemini. Submit complaints or queries in Hindi, Hinglish or English." />
+  <title>AI Assistant – JanMitra AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/assistant.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586"/><path d="M3 4a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H7l-4 4V4z"/></svg>
+      </div>
+      <div class="logo-wordmark">
+        <span class="logo-wordmark-top">JanMitra <span>AI</span></span>
+        <span class="logo-wordmark-sub">Citizen Services</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="workflow.html" class="nav-link">Services</a></li>
+      <li><a href="assistant.html" class="nav-link active">Assistant</a></li>
+      <li><a href="resources.html" class="nav-link">Resources</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="workflow.html" class="btn btn-ghost btn-sm">Services</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="assistant-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="assistant-sidebar" id="assistantSidebar">
+
+    <div class="sidebar-header">
+      <div class="sidebar-brand">
+        <div class="logo-mark" style="width:30px;height:30px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9"/><path d="M3 4a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H7l-4 4V4z"/></svg>
+        </div>
+        <span class="sidebar-brand-name">JanMitra AI</span>
+      </div>
+      <div class="sidebar-status">
+        <span class="online-dot"></span>
+        <span id="modelStatusLabel">Gemini Ready</span>
+      </div>
+    </div>
+
+    <!-- GEMINI STATUS (API key is pre-configured) -->
+    <div class="api-key-section" style="padding:10px 0 4px;">
+      <div class="api-key-status connected" id="apiKeyStatus" style="font-size:0.78rem;display:flex;align-items:center;gap:6px;">
+        <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#4ade80;flex-shrink:0;box-shadow:0 0 6px #4ade80aa;"></span>
+        Connected — Gemini 2.5 Flash
+      </div>
+    </div>
+
+    <!-- SERVICE SELECTOR -->
+    <div class="service-selector">
+      <span class="sidebar-label">Select Service</span>
+      <div class="service-pills" id="servicePills">
+        <button class="service-pill active" data-service="complaint" id="pillComplaint">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Complaint
+        </button>
+        <button class="service-pill" data-service="form" id="pillForm">
+          <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          Form Help
+        </button>
+        <button class="service-pill" data-service="policy" id="pillPolicy">
+          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          Policy
+        </button>
+        <button class="service-pill" data-service="support" id="pillSupport">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/></svg>
+          Support
+        </button>
+      </div>
+    </div>
+
+    <!-- LANGUAGE -->
+    <div class="lang-selector">
+      <span class="sidebar-label">Input Language</span>
+      <div class="lang-options" id="langOptions">
+        <button class="lang-btn active" data-lang="hinglish" id="langHinglish">Hinglish</button>
+        <button class="lang-btn" data-lang="hindi" id="langHindi">&#x939;&#x93F;&#x902;&#x926;&#x940;</button>
+        <button class="lang-btn" data-lang="english" id="langEnglish">English</button>
+      </div>
+    </div>
+
+    <!-- EXAMPLES -->
+    <div class="sidebar-examples">
+      <span class="sidebar-label">Quick Examples</span>
+      <div class="example-list" id="exampleList">
+        <button class="sidebar-example-btn" id="ex1">Bijli 3 din se nahi hai</button>
+        <button class="sidebar-example-btn" id="ex2">Paani supply band hai</button>
+        <button class="sidebar-example-btn" id="ex3">Sadak mein gadhde hain</button>
+        <button class="sidebar-example-btn" id="ex4">Hospital mein doctor nahi aata</button>
+        <button class="sidebar-example-btn" id="ex5">Ration card banwana hai</button>
+      </div>
+    </div>
+
+    <!-- HISTORY -->
+    <div class="sidebar-history">
+      <span class="sidebar-label">Recent Queries</span>
+      <div class="history-list" id="historyList">
+        <div class="history-empty">No recent queries</div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="assistant-main" id="assistantMain">
+
+    <!-- SERVICE BANNER -->
+    <div class="service-banner" id="serviceBanner">
+      <div class="service-banner-icon" id="bannerIcon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div class="service-banner-text">
+        <h2 id="bannerTitle">File a Complaint</h2>
+        <p id="bannerDesc">Describe your problem. Gemini AI will generate a professional bilingual complaint.</p>
+      </div>
+      <a href="workflow.html" class="btn btn-ghost btn-sm" id="changeSvcBtn">Change Service</a>
+    </div>
+
+    <!-- CHAT WINDOW -->
+    <div class="chat-window" id="chatWindow">
+      <div class="chat-message ai-message" id="welcomeMsg">
+        <div class="msg-avatar">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="msg-bubble ai-bubble">
+          <p><strong>Namaste.</strong> I am JanMitra AI, powered by Google Gemini.</p>
+          <p>Please describe your issue below in <strong>Hindi, Hinglish, or English</strong>. I will help you prepare a professional government complaint.</p>
+          <div class="quick-chips" id="quickChips">
+            <button class="quick-chip" id="chip1">Power outage in my area</button>
+            <button class="quick-chip" id="chip2">Water supply disrupted</button>
+            <button class="quick-chip" id="chip3">Road needs repair</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TYPING INDICATOR -->
+    <div class="typing-indicator" id="typingIndicator" style="display:none">
+      <div class="msg-avatar" style="background:var(--navy);border:1px solid var(--border-gold);">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--gold)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <div class="typing-bubble">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+      <span class="typing-label">Gemini is composing your response&hellip;</span>
+    </div>
+
+    <!-- INPUT AREA -->
+    <div class="input-area" id="inputArea">
+      <div class="input-row">
+        <div class="input-wrapper">
+          <textarea
+            class="main-input"
+            id="mainInput"
+            placeholder="Apni samasya yahan likhein... (Describe your issue in Hindi, Hinglish or English)"
+            rows="3"
+            maxlength="2000"
+            aria-label="Enter your complaint or query"
+          ></textarea>
+          <div class="input-footer-bar">
+            <span class="char-count" id="charCount">0 / 2000</span>
+            <div class="input-icon-btns">
+              <button class="btn-icon" id="voiceBtn" title="Voice Input" aria-label="Start voice input">
+                <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+              </button>
+              <button class="btn-icon" id="clearBtn" title="Clear input" aria-label="Clear input">
+                <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="btn-submit" id="submitBtn" aria-label="Submit to Gemini AI">
+          <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <span class="submit-label">Send</span>
+        </button>
+      </div>
+      <p class="input-hint">Press Enter to send &nbsp;&middot;&nbsp; Shift+Enter for new line &nbsp;&middot;&nbsp; <span id="voiceHint"></span></p>
+    </div>
+
+  </main>
+</div>
+
+<!-- VOICE MODAL -->
+<div class="modal-overlay" id="voiceModal" style="display:none">
+  <div class="modal-box voice-modal">
+    <div class="voice-anim" id="voiceAnim">
+      <div class="v-ring"></div>
+      <div class="v-ring"></div>
+      <div class="v-ring"></div>
+      <div class="v-center">
+        <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+      </div>
+    </div>
+    <h3>Listening&hellip;</h3>
+    <p id="voiceTranscript">Speak your complaint in Hindi or English.</p>
+    <button class="btn btn-outline" id="stopVoiceBtn">Stop Recording</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script src="js/assistant.js"></script>
+</body>
+</html>

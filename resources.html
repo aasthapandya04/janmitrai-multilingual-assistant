@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JanMitra AI – Resources Hub. Government schemes, FAQs, user guide, contact helplines, and documentation." />
+  <title>Resources – JanMitra AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/resources.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586"/><path d="M3 4a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H7l-4 4V4z"/></svg>
+      </div>
+      <div class="logo-wordmark">
+        <span class="logo-wordmark-top">JanMitra <span>AI</span></span>
+        <span class="logo-wordmark-sub">Citizen Services</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="workflow.html" class="nav-link">Services</a></li>
+      <li><a href="assistant.html" class="nav-link">Assistant</a></li>
+      <li><a href="resources.html" class="nav-link active">Resources</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="workflow.html" class="btn btn-gold btn-sm">Get Started</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="resources-page-header" id="top">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> <span>&rsaquo;</span> <span>Resources</span>
+    </div>
+    <h1 class="page-title">Citizen Resources Hub</h1>
+    <p class="page-subtitle">Discover government schemes, learn to use our services, find helplines, and read FAQs — all in one place.</p>
+    <div class="resource-search">
+      <input type="search" id="resourceSearch" placeholder="Search schemes, FAQs, guides..." aria-label="Search resources" />
+      <button id="resourceSearchBtn">Search</button>
+    </div>
+  </div>
+</section>
+
+<!-- TAB NAV -->
+<nav class="resource-tabs-nav" id="resourceTabsNav">
+  <div class="container">
+    <div class="resource-tabs">
+      <a href="#schemes" class="res-tab active" id="tabSchemes">
+        <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        Govt Schemes
+      </a>
+      <a href="#students" class="res-tab" id="tabStudents">
+        <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        Students
+      </a>
+      <a href="#guide" class="res-tab" id="tabGuide">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        User Guide
+      </a>
+      <a href="#faq" class="res-tab" id="tabFaq">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        FAQs
+      </a>
+      <a href="#contact" class="res-tab" id="tabContact">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.15 1.18 2 2 0 012.12 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.45a2 2 0 012.11.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Helplines
+      </a>
+      <a href="#docs" class="res-tab" id="tabDocs">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Documentation
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="resources-main">
+  <div class="container">
+
+    <!-- SCHEMES -->
+    <section class="resource-section" id="schemes">
+      <div class="section-header-row">
+        <div>
+          <h2>Government Schemes</h2>
+          <p>Major welfare and development programmes by the Government of India</p>
+        </div>
+        <a href="assistant.html?service=policy" class="btn btn-gold btn-sm">Ask AI About Any Scheme</a>
+      </div>
+      <div class="schemes-grid">
+        <div class="scheme-card" id="scPmk">
+          <div class="scheme-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 8v4l3 3"/></svg></div>
+          <div class="scheme-info">
+            <h3>PM Kisan Samman Nidhi</h3>
+            <p>Direct income support of Rs. 6000 per year to farmer families in 3 equal instalments.</p>
+            <div class="scheme-tags"><span class="stag stag-active">Active</span><span class="stag">Agriculture</span><span class="stag">Direct Benefit</span></div>
+          </div>
+          <a href="assistant.html?service=policy&query=PM+Kisan+Samman+Nidhi" class="btn btn-outline btn-sm">Ask AI</a>
+        </div>
+
+        <div class="scheme-card" id="scAyush">
+          <div class="scheme-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <div class="scheme-info">
+            <h3>Ayushman Bharat PM-JAY</h3>
+            <p>Health insurance cover of Rs. 5 lakh per family per year for secondary &amp; tertiary hospitalisation.</p>
+            <div class="scheme-tags"><span class="stag stag-active">Active</span><span class="stag">Healthcare</span><span class="stag">Insurance</span></div>
+          </div>
+          <a href="assistant.html?service=policy&query=Ayushman+Bharat+PM+JAY" class="btn btn-outline btn-sm">Ask AI</a>
+        </div>
+
+        <div class="scheme-card" id="scUjjwala">
+          <div class="scheme-icon"><svg viewBox="0 0 24 24"><path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8z"/></svg></div>
+          <div class="scheme-info">
+            <h3>Pradhan Mantri Ujjwala Yojana</h3>
+            <p>Free LPG connections to women from below poverty line households to replace solid fuels.</p>
+            <div class="scheme-tags"><span class="stag stag-active">Active</span><span class="stag">Women Welfare</span><span class="stag">Energy</span></div>
+          </div>
+          <a href="assistant.html?service=policy&query=Ujjwala+Yojana" class="btn btn-outline btn-sm">Ask AI</a>
+        </div>
+
+        <div class="scheme-card" id="scJanDhan">
+          <div class="scheme-icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+          <div class="scheme-info">
+            <h3>PM Jan Dhan Yojana</h3>
+            <p>Financial inclusion scheme for universal access to banking, insurance, and pension services.</p>
+            <div class="scheme-tags"><span class="stag stag-active">Active</span><span class="stag">Banking</span><span class="stag">Financial</span></div>
+          </div>
+          <a href="assistant.html?service=policy&query=PM+Jan+Dhan+Yojana" class="btn btn-outline btn-sm">Ask AI</a>
+        </div>
+
+        <div class="scheme-card" id="scMudra">
+          <div class="scheme-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <div class="scheme-info">
+            <h3>PM MUDRA Yojana</h3>
+            <p>Micro-credit up to Rs. 10 lakh to non-corporate, non-farm small/micro enterprises.</p>
+            <div class="scheme-tags"><span class="stag stag-active">Active</span><span class="stag">MSME</span><span class="stag">Loans</span></div>
+          </div>
+          <a href="assistant.html?service=policy&query=Mudra+Loan+Yojana" class="btn btn-outline btn-sm">Ask AI</a>
+        </div>
+
+        <div class="scheme-card" id="scSwach">
+          <div class="scheme-icon"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg></div>
+          <div class="scheme-info">
+            <h3>Swachh Bharat Mission</h3>
+            <p>Nationwide campaign for elimination of open defecation, ODF villages, and solid waste management.</p>
+            <div class="scheme-tags"><span class="stag stag-active">Active</span><span class="stag">Sanitation</span><span class="stag">Rural</span></div>
+          </div>
+          <a href="assistant.html?service=policy&query=Swachh+Bharat+Mission" class="btn btn-outline btn-sm">Ask AI</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider"><div class="ornament-divider-center"></div></div>
+
+    <!-- STUDENTS -->
+    <section class="resource-section" id="students">
+      <div class="section-header-row">
+        <div>
+          <h2>For Students</h2>
+          <p>Scholarships, educational schemes, and career resources for young citizens</p>
+        </div>
+      </div>
+      <div class="student-grid">
+        <div class="student-card" id="scSch">
+          <div class="sc-header">
+            <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+            <div>
+              <h3>National Scholarship Portal</h3>
+              <span class="sc-tag">Scholarship</span>
+            </div>
+          </div>
+          <p>One-stop platform for all central and state government scholarships for SC/ST/OBC/Minority and merit-based students.</p>
+          <div class="sc-actions">
+            <a href="https://scholarships.gov.in" target="_blank" class="btn btn-outline btn-sm">Visit Portal</a>
+            <a href="assistant.html?service=policy&query=National Scholarship Portal eligibility" class="btn btn-ghost btn-sm">Ask AI</a>
+          </div>
+        </div>
+
+        <div class="student-card" id="scNhef">
+          <div class="sc-header">
+            <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+            <div>
+              <h3>Skill India Mission</h3>
+              <span class="sc-tag">Skill Dev</span>
+            </div>
+          </div>
+          <p>Free vocational training, certification, and job placement assistance for youth under PMKVY and associated programs.</p>
+          <div class="sc-actions">
+            <a href="https://www.skillindia.gov.in" target="_blank" class="btn btn-outline btn-sm">Visit Portal</a>
+            <a href="assistant.html?service=policy&query=Skill India PMKVY" class="btn btn-ghost btn-sm">Ask AI</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider"><div class="ornament-divider-center"></div></div>
+
+    <!-- GUIDE -->
+    <section class="resource-section" id="guide">
+      <div class="section-header-row">
+        <div>
+          <h2>How to Use JanMitra AI</h2>
+          <p>Step-by-step guide to making the most of our AI assistant</p>
+        </div>
+      </div>
+      <div class="guide-steps">
+        <div class="guide-step" id="gs1">
+          <div class="gs-num">I</div>
+          <div class="gs-content">
+            <h3>Open the AI Assistant</h3>
+            <p>Navigate to the Assistant page from the top navigation. Select "Services" to choose what kind of help you need first — Complaint, Form Help, Policy, or Support Routing.</p>
+          </div>
+        </div>
+        <div class="guide-step" id="gs2">
+          <div class="gs-num">II</div>
+          <div class="gs-content">
+            <h3>Gemini API Key is Stored Securely</h3>
+            <p>This app now uses a server-side Gemini key proxy. Your API key is kept on the backend and is never stored in browser local storage.</p>
+          </div>
+        </div>
+        <div class="guide-step" id="gs3">
+          <div class="gs-num">III</div>
+          <div class="gs-content">
+            <h3>Describe Your Problem</h3>
+            <p>Type your complaint naturally in Hindi, Hinglish, or English. Use the microphone button for voice input if preferred. You can also click example queries in the sidebar to get started.</p>
+          </div>
+        </div>
+        <div class="guide-step" id="gs4">
+          <div class="gs-num">IV</div>
+          <div class="gs-content">
+            <h3>Review the AI Response</h3>
+            <p>Gemini AI will identify the department, assess priority, and generate a professional bilingual complaint draft. For complaint filings, a unique ticket ID is assigned automatically.</p>
+          </div>
+        </div>
+        <div class="guide-step" id="gs5">
+          <div class="gs-num">V</div>
+          <div class="gs-content">
+            <h3>Download &amp; Submit</h3>
+            <p>View your full results on the Results page. Download English and Hindi PDFs, copy the ticket ID, and submit the document to the appropriate government department portal or office.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider"><div class="ornament-divider-center"></div></div>
+
+    <!-- FAQ -->
+    <section class="resource-section" id="faq">
+      <div class="section-header-row">
+        <div>
+          <h2>Frequently Asked Questions</h2>
+          <p>Common questions about JanMitra AI and government services</p>
+        </div>
+      </div>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item" id="faqApi">
+          <button class="faq-question" aria-expanded="false">
+            Do I need to pay to use JanMitra AI?
+            <span class="faq-arrow">&rsaquo;</span>
+          </button>
+          <div class="faq-answer"><p>JanMitra AI is free to use. You need a Google Gemini API key, which is free to obtain from Google AI Studio (aistudio.google.com). The free tier provides generous usage limits suitable for complaint filing.</p></div>
+        </div>
+        <div class="faq-item" id="faqLang">
+          <button class="faq-question" aria-expanded="false">
+            Can I write my complaint in Hindi?
+            <span class="faq-arrow">&rsaquo;</span>
+          </button>
+          <div class="faq-answer"><p>Yes. You can write in Hindi (Devanagari script), Hinglish (Hindi words in Roman letters), or English. The AI understands all three and responds accordingly, also generating the formal complaint in both Hindi and English.</p></div>
+        </div>
+        <div class="faq-item" id="faqOfficial">
+          <button class="faq-question" aria-expanded="false">
+            Is JanMitra AI an official government platform?
+            <span class="faq-arrow">&rsaquo;</span>
+          </button>
+          <div class="faq-answer"><p>No. JanMitra AI is a hackathon prototype to demonstrate how AI can help citizens interact with government services. The documents generated are templates — they should be formally submitted through official government portals or offices.</p></div>
+        </div>
+        <div class="faq-item" id="faqPrivacy">
+          <button class="faq-question" aria-expanded="false">
+            Where is my data stored?
+            <span class="faq-arrow">&rsaquo;</span>
+          </button>
+          <div class="faq-answer"><p>Your API key and recent query history are stored only in your browser's localStorage — nothing is sent to any third-party server by JanMitra AI. Your complaint text is sent to Google Gemini API for processing as per Google's standard privacy policy.</p></div>
+        </div>
+        <div class="faq-item" id="faqDept">
+          <button class="faq-question" aria-expanded="false">
+            How does the AI know which department to route my complaint to?
+            <span class="faq-arrow">&rsaquo;</span>
+          </button>
+          <div class="faq-answer"><p>Google Gemini analyzes the content of your complaint and identifies keywords, context, and category (electricity, water, roads, health, etc.) to match it to the appropriate government department from our database of over 50 departments.</p></div>
+        </div>
+        <div class="faq-item" id="faqVoice">
+          <button class="faq-question" aria-expanded="false">
+            Does voice input support Hindi?
+            <span class="faq-arrow">&rsaquo;</span>
+          </button>
+          <div class="faq-answer"><p>Yes. Voice input is powered by the browser's Web Speech API and supports Hindi (hi-IN) and English (en-IN). For best results, use Google Chrome or Microsoft Edge. Firefox and Safari have limited support.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider"><div class="ornament-divider-center"></div></div>
+
+    <!-- CONTACT -->
+    <section class="resource-section" id="contact">
+      <div class="section-header-row">
+        <div>
+          <h2>Helplines &amp; Contact</h2>
+          <p>Official government contact information and helplines for citizen services</p>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card" id="cc1">
+          <div class="contact-icon-box"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.15 1.18 2 2 0 012.12 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.91-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <h3>PM Grievance</h3>
+          <p>Prime Minister's Office grievance portal for escalated issues</p>
+          <a href="https://pgportal.gov.in" target="_blank" class="contact-link">pgportal.gov.in</a>
+        </div>
+        <div class="contact-card" id="cc2">
+          <div class="contact-icon-box"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.15 1.18 2 2 0 012.12 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.91-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <h3>Electricity Helpline</h3>
+          <p>24/7 power outage and billing complaints</p>
+          <a href="tel:1912" class="contact-link">1912 (Toll Free)</a>
+        </div>
+        <div class="contact-card" id="cc3">
+          <div class="contact-icon-box"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.15 1.18 2 2 0 012.12 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.91-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <h3>Health Helpline</h3>
+          <p>Medical emergencies and public health grievances</p>
+          <a href="tel:104" class="contact-link">104 (Toll Free)</a>
+        </div>
+        <div class="contact-card" id="cc4">
+          <div class="contact-icon-box"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.15 1.18 2 2 0 012.12 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.91-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <h3>Police Emergency</h3>
+          <p>Law enforcement and public safety emergencies</p>
+          <a href="tel:100" class="contact-link">100 (Emergency)</a>
+        </div>
+      </div>
+
+      <div class="helplines-box">
+        <h3>Quick Helpline Reference</h3>
+        <div class="helplines-grid">
+          <div class="helpline-item"><span>Electricity</span><strong>1912</strong></div>
+          <div class="helpline-item"><span>Police</span><strong>100</strong></div>
+          <div class="helpline-item"><span>Health</span><strong>104</strong></div>
+          <div class="helpline-item"><span>Women</span><strong>1091</strong></div>
+          <div class="helpline-item"><span>Water</span><strong>1916</strong></div>
+          <div class="helpline-item"><span>Consumer</span><strong>1800-11-4000</strong></div>
+          <div class="helpline-item"><span>Rural Dev</span><strong>1800-11-6446</strong></div>
+          <div class="helpline-item"><span>Senior Cit.</span><strong>14567</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider"><div class="ornament-divider-center"></div></div>
+
+    <!-- DOCS -->
+    <section class="resource-section" id="docs">
+      <div class="section-header-row">
+        <div>
+          <h2>Documentation &amp; Guides</h2>
+          <p>Technical guides and API documentation for developers</p>
+        </div>
+      </div>
+      <div class="docs-grid">
+        <a href="https://aistudio.google.com/app/apikey" target="_blank" class="doc-card" id="dc1">
+          <div class="doc-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+          <h3>Get API Key</h3>
+          <p>Create your free Gemini API key at Google AI Studio to activate live AI features.</p>
+          <span class="doc-link">aistudio.google.com &rarr;</span>
+        </a>
+        <a href="https://ai.google.dev/gemini-api/docs" target="_blank" class="doc-card" id="dc2">
+          <div class="doc-card-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <h3>Gemini API Docs</h3>
+          <p>Official Google Gemini API documentation for developers building with generative AI.</p>
+          <span class="doc-link">ai.google.dev &rarr;</span>
+        </a>
+        <a href="https://pgportal.gov.in" target="_blank" class="doc-card" id="dc3">
+          <div class="doc-card-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <h3>Grievance Portal</h3>
+          <p>Official Government of India portal for filing and tracking citizen grievances.</p>
+          <span class="doc-link">pgportal.gov.in &rarr;</span>
+        </a>
+        <a href="https://serviceonline.gov.in" target="_blank" class="doc-card" id="dc4">
+          <div class="doc-card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h3>Service Online</h3>
+          <p>Central government service delivery platform for obtaining certificates and official documents.</p>
+          <span class="doc-link">serviceonline.gov.in &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer-mini">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>&copy; 2024 JanMitra AI &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="assistant.html">Assistant</a></p>
+      <p>Prototype &mdash; Not an official government platform</p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script src="js/resources.js"></script>
+</body>
+</html>
