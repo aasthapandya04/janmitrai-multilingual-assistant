@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JanMitra AI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo" onclick="navigateTo('home-page')">
+            <i class="fa-solid fa-hands-holding-circle"></i> JanMitra AI
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="navigateTo('home-page')">Home</a></li>
+            <li><a href="#" onclick="navigateTo('resources-page')">Resources</a></li>
+        </ul>
+    </nav>
+
+    <main id="app-container">
+
+        <section id="home-page" class="page active">
+            <div class="hero">
+                <h1>Your Intelligent Government Service Companion</h1>
+                <p>Seamlessly file complaints, understand policies, and fill forms in your preferred language.</p>
+                <button class="btn-primary" onclick="navigateTo('workflow-page')">Start Now <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="features">
+                <h2>How Can We Help You Today?</h2>
+                <div class="grid">
+                    <div class="card" onclick="navigateTo('assistant-page', 'Complaint')">
+                        <i class="fa-solid fa-file-signature text-saffron"></i>
+                        <h3>File Complaint</h3>
+                        <p>Generate professional bilingual complaints automatically.</p>
+                    </div>
+                    <div class="card" onclick="navigateTo('assistant-page', 'Form')">
+                        <i class="fa-solid fa-file-lines text-green"></i>
+                        <h3>Government Form</h3>
+                        <p>Get step-by-step assistance filling out official forms.</p>
+                    </div>
+                    <div class="card" onclick="navigateTo('assistant-page', 'Policy')">
+                        <i class="fa-solid fa-book-open text-saffron"></i>
+                        <h3>Policy Explainer</h3>
+                        <p>Understand complex government policies in simple terms.</p>
+                    </div>
+                    <div class="card" onclick="navigateTo('assistant-page', 'Support')">
+                        <i class="fa-solid fa-headset text-green"></i>
+                        <h3>Support Routing</h3>
+                        <p>Find the exact department for your specific needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="workflow-page" class="page">
+            <div class="container text-center">
+                <h2>Select a Workflow</h2>
+                <p>Choose the type of assistance you require.</p>
+                <div class="grid mt-2">
+                    <button class="btn-outline" onclick="navigateTo('assistant-page', 'Complaint')">File Complaint</button>
+                    <button class="btn-outline" onclick="navigateTo('assistant-page', 'Form')">Government Form Help</button>
+                    <button class="btn-outline" onclick="navigateTo('assistant-page', 'Policy')">Policy Explainer</button>
+                    <button class="btn-outline" onclick="navigateTo('assistant-page', 'Support')">Support Routing</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="assistant-page" class="page">
+            <div class="container">
+                <h2 id="workflow-title">AI Assistant</h2>
+                <p>Describe your issue in Hindi, Hinglish, or English.</p>
+                
+                <div class="chat-interface">
+                    <textarea id="user-input" rows="6" placeholder="Example: Mere area mein pichle 3 din se pani nahi aa raha hai, please help..."></textarea>
+                    
+                    <div class="action-bar">
+                        <button class="btn-icon" title="Voice Input"><i class="fa-solid fa-microphone"></i></button>
+                        <button class="btn-primary" onclick="processAI()">Submit to AI <i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+
+                <div id="loading-spinner" class="hidden">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Processing your request...
+                </div>
+            </div>
+        </section>
+
+        <section id="results-page" class="page">
+            <div class="container">
+                <div class="result-header">
+                    <h2><i class="fa-solid fa-circle-check text-green"></i> Request Processed</h2>
+                    <button class="btn-secondary"><i class="fa-solid fa-download"></i> Download PDF</button>
+                </div>
+
+                <div class="ticket-info">
+                    <div><strong>Ticket ID:</strong> <span id="res-ticket">JM-8492</span></div>
+                    <div><strong>Category:</strong> <span id="res-category">Water Supply</span></div>
+                    <div><strong>Department:</strong> <span id="res-dept">Municipal Corporation</span></div>
+                    <div><strong>Priority:</strong> <span class="badge-high">High</span></div>
+                </div>
+
+                <div class="draft-grid">
+                    <div class="draft-card">
+                        <h3>English Draft</h3>
+                        <div class="draft-content" id="draft-en">
+                            </div>
+                    </div>
+                    <div class="draft-card">
+                        <h3>Hindi Draft</h3>
+                        <div class="draft-content" id="draft-hi">
+                            </div>
+                    </div>
+                </div>
+                
+                <div class="mt-2 text-center">
+                    <button class="btn-outline" onclick="navigateTo('home-page')">Start New Request</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources-page" class="page">
+            <div class="container">
+                <h2>Resources & Help</h2>
+                <div class="grid">
+                    <ul class="resource-list">
+                        <li><i class="fa-solid fa-landmark"></i> Government Schemes</li>
+                        <li><i class="fa-solid fa-graduation-cap"></i> Student Resources</li>
+                        <li><i class="fa-solid fa-book"></i> User Guide</li>
+                    </ul>
+                    <ul class="resource-list">
+                        <li><i class="fa-solid fa-circle-question"></i> FAQs</li>
+                        <li><i class="fa-solid fa-phone"></i> Contact Information</li>
+                        <li><i class="fa-solid fa-video"></i> Demo Videos</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 JanMitra AI. Hackathon Phase 3 MVP.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
